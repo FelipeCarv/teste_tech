@@ -19,6 +19,7 @@ body{
     background-color: rgb(235, 60, 168);
     border-left: 10px solid  rgb(235, 60, 168);
     overflow: hidden;
+    
 }
 
 .menu-lateral ul{
@@ -60,10 +61,22 @@ body{
     color: rgb(235, 60, 168);
 }
 
+.menu-lateral.active{
+
+    display: none;
+}
+
 main{
     position: absolute;
     max-width: calc(100% - 250px);
     left: 250px;
+    min-height: 100vh;
+
+}
+
+main.active{
+    max-width: calc(100% + 250px);
+    left: 0px;
     min-height: 100vh;
 }
 
@@ -125,3 +138,19 @@ main{
     left: -30px;
     color: gainsboro;
 }
+
+.user{
+    margin-right: 20px;
+}
+
+.user .user-info .name{
+    color: black;
+    font-weight: 700;
+}
+
+.user .user-info .user-function{
+    color: gray;
+    font-size: 14px;
+}
+
+
