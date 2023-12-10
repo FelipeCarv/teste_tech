@@ -1,0 +1,61 @@
+html{
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+}
+
+.menu-lateral{
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    background-color: rgb(235, 60, 168);
+    border-left: 10px solid  rgb(235, 60, 168);
+    overflow: hidden;
+}
+
+.menu-lateral ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.menu-lateral ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+.menu-lateral ul li:hover{
+    background-color: white;
+    
+}
+
+.menu-lateral ul li:nth-child(1){
+    margin-bottom: 40px;
+    pointer-events: none;
+}
+
+.menu-lateral ul li a{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    display: flex;
+    color: white;
+    padding: 10px 40px;
+    margin-left: 10px;
+}
+
+.menu-lateral ul li a:hover{
+    color: rgb(235, 60, 168);
+}
