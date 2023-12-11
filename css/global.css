@@ -7,14 +7,24 @@ body{
     overflow-x: hidden;
 }
 
+p{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    padding-left: 0;
+}
 .container{
     position: relative;
     width: 100%;
+    padding-left: 0;
+    margin-left: 0;
 }
 
 .menu-lateral{
     position: fixed;
-    width: 250px;
+    width: 200px;
     height: 100%;
     background-color: rgb(235, 60, 168);
     border-left: 10px solid  rgb(235, 60, 168);
@@ -68,14 +78,13 @@ body{
 
 main{
     position: absolute;
-    max-width: calc(100% - 250px);
-    left: 250px;
+    max-width: calc(100% - 200px);
+    left: 200px;
     min-height: 100vh;
-
 }
 
 main.active{
-    max-width: calc(100% + 250px);
+    max-width: calc(100% + 200px);
     left: 0px;
     min-height: 100vh;
 }
@@ -153,4 +162,40 @@ main.active{
     font-size: 14px;
 }
 
+.infocards{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.infocharts{
+    padding: 10px 20px;
+}
+
+.charts{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+canvas{
+    border: 1px solid gainsboro;
+}
+
+.download-btn {
+    border: 1px solid black; /* Cor da borda */
+    color: black; /* Cor do texto e do ícone */
+    background-color: transparent; /* Fundo transparente */
+}
+
+.list{
+    width: 100%;
+    padding: 20px;
+}
+
+.list .container{
+    margin: 0 auto;
+    max-width: 1400px;
+}
 
