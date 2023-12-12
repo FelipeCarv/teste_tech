@@ -183,7 +183,7 @@ canvas{
     border: 1px solid gainsboro;
 }
 
-.download-btn {
+.download-btn, .btn-filtro {
     border: 1px solid black; /* Cor da borda */
     color: black; /* Cor do texto e do ícone */
     background-color: transparent; /* Fundo transparente */
@@ -208,11 +208,13 @@ canvas{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 0 auto;
 }
 
 .info-filter{
     max-width: 300px;
 }
+
 
 .info-filter h4{
     color: #272727;
@@ -229,4 +231,20 @@ canvas{
 .button button{
     display: flex;
     gap: 5px;
+}
+
+.list-info h6{
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+.list-info p{
+    color: #898989;
+    font-family: Poppins;
+    font-size: 14px;
+}
+
+.form-group{
+    margin-bottom: 20px;
 }

@@ -7,6 +7,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
     <title>TECHNOTAS</title>
 </head>
@@ -20,7 +23,7 @@
                 <a href="#"><span>TECHNOTAS</span></a>
             </li>
             <li>
-                <a href="/index.html">
+                <a href="/">
                     <span class="icon"><i class="bi bi-speedometer2"></i></span>
                     <span class="title">Dashboard</span>
                 </a>
@@ -67,6 +70,63 @@
 
 
         <!--INFOCARDS-->
+        <div class="filter">
+          <div class="container">
+            <div class="info-filter filter-flex">
+              <h4>Olá John Doe.</h4>
+            </div>
+
+            <div>
+              <button type="button" class="btn btn-primary btn-sm btn-filtro" data-toggle="modal" data-target="#filtroModal">
+                <i class="bi bi-filter"></i>
+              </button>
+          
+              <div class="modal fade" id="filtroModal" tabindex="-1" role="dialog" aria-labelledby="filtroModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="filtroModalLabel">Filtrar por: </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="form-group">
+                          <label for="selectMes">Mês: </label>
+                          <select class="form-control" id="selectMes">
+                            <option value="#">Selecione</option>
+                            <option value="jan">Janeiro</option>
+                            <option value="fev">Fevereiro</option>
+                            <!-- Adicione as opções para os outros meses -->
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label for="selectTrimestre">Trimestre:</label>
+                          <select class="form-control" id="selectTrimestre">
+                            <option value="1">1º Trimestre</option>
+                            <option value="2">2º Trimestre</option>
+                            <!-- Adicione as opções para os outros trimestres -->
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label for="selectAno">Ano:</label>
+                          <select class="form-control" id="selectAno">
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                            <!-- Adicione as opções para os outros anos -->
+                          </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Aplicar Filtro</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <section class="infocards">
             <div class="card" style="width: 11rem;">
                 <div class="card-body">
@@ -216,7 +276,7 @@
                      <p>Em Atraso</p>
                     </div>
                      <button class="btn btn-primary btn-sm download-btn">
-                       <i class="bi bi-download"></i> Buscar
+                       <i class="bi bi-download"></i> Download
                      </button>
                    </li>
                   
