@@ -65,7 +65,53 @@
             </div>
         </section>
 
+        <div class="filter">
+          <div class="container">
+            <div class="info-filter">
+              <h4>Notas Fiscais</h4>
+              <p>Acompanhe aqui as notas fiscais emitidas.</p>
+            </div>
 
+            <div class="filtro-container">
+              <div class="row">
+                <div class="col-md-3">
+                  <label for="">Data de Emissão</label>
+                  <input type="date" id="dataEmissao" class="form-control">
+                </div>
+                <div class="col-md-3">
+                  <label for="">Data de Cobrança</label>
+                  <input type="date" id="dataCobranca" class="form-control" >
+                </div>
+                <div class="col-md-3">
+                  <label for="">Mês de Pagamento</label>
+                  <select id="mesPagamento" class="form-control">
+                    <option value="">Selecione</option>
+                    <option value="jan">Janeiro</option>
+                    <option value="fev">Fevereiro</option>
+                    <option value="dez">Dezembro</option>
+                  </select>
+                </div>
+                <div class="col-md-3">
+                  <label for="">Status da Nota</label>
+                  <select id="statusNota" class="form-control">
+                    <option value="">Selecione</option>
+                    <!-- Adicione aqui os status -->
+                    <option value="pendente">Pendente</option>
+                    <option value="pago">Pago</option>
+                  </select>
+
+                </div>
+              </div>
+            </div>
+           
+            <div class="button">
+              <button class="btn btn-primary d-flex download-btn">
+                <i class="bi bi-search"></i> Buscar
+              </button>
+            </div>
+           
+          </div>
+        </div>
 
         <div class="list">
             <div class="container">

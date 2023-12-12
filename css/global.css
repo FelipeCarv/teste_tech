@@ -199,3 +199,34 @@ canvas{
     max-width: 1400px;
 }
 
+.filter{
+    width: 100%;
+    padding: 20px;    
+}
+
+.filter .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info-filter{
+    max-width: 300px;
+}
+
+.info-filter h4{
+    color: #272727;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+
+.info-filter p{
+    color: #696969;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+}
+
+.button button{
+    display: flex;
+    gap: 5px;
+}
