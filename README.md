@@ -1,0 +1,1 @@
+Essa aplicação é uma aplicação bem simples, basta apenas clonar em sua máquina e executar no servidor local (live server, por exemplo.) 
