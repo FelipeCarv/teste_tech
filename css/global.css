@@ -1,3 +1,14 @@
+:root{
+    --white: #ffffff;
+    --black: #000000;
+    --pink: rgb(235, 60, 168);
+    --border: #dcdcdc;
+    --gray: #808080;
+    --gray-2: #272727;
+    --gray-3: #696969;
+    --gray-4: #898989;
+}
+
 html{
     font-family: 'Poppins', sans-serif;
 }
@@ -26,8 +37,8 @@ ul{
     position: fixed;
     width: 200px;
     height: 100%;
-    background-color: rgb(235, 60, 168);
-    border-left: 10px solid  rgb(235, 60, 168);
+    background-color: var(--pink);
+    border-left: 10px solid  var(--pink);
     overflow: hidden;
     
 }
@@ -48,7 +59,7 @@ ul{
 }
 
 .menu-lateral ul li:hover{
-    background-color: white;
+    background-color: var(--white);
     
 }
 
@@ -62,13 +73,13 @@ ul{
     gap: 20px;
     width: 100%;
     display: flex;
-    color: white;
+    color: var(--white);
     padding: 10px 40px;
     margin-left: 10px;
 }
 
 .menu-lateral ul li a:hover{
-    color: rgb(235, 60, 168);
+    color: var(--pink);
 }
 
 .menu-lateral.active{
@@ -94,7 +105,7 @@ main.active{
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    border-bottom: 1px solid gainsboro;
+    border-bottom: 1px solid var(--border);
     height: 60px;
 }
 
@@ -138,14 +149,14 @@ main.active{
     border-radius: 40px;
     padding: 5px 20px;
     outline: none;
-    border: 1px solid gainsboro;
+    border: 1px solid var(--border);
 }
 
 .search label span{
     position: relative;
     top: 0;
     left: -30px;
-    color: gainsboro;
+    color: var(--border);
 }
 
 .user{
@@ -153,12 +164,12 @@ main.active{
 }
 
 .user .user-info .name{
-    color: black;
+    color: var(--black);
     font-weight: 700;
 }
 
 .user .user-info .user-function{
-    color: gray;
+    color: var(--gray);
     font-size: 14px;
 }
 
@@ -180,12 +191,12 @@ main.active{
 }
 
 canvas{
-    border: 1px solid gainsboro;
+    border: 1px solid var(--border);
 }
 
 .download-btn, .btn-filtro {
-    border: 1px solid black; /* Cor da borda */
-    color: black; /* Cor do texto e do ícone */
+    border: 1px solid var(--black); /* Cor da borda */
+    color: var(--black); /* Cor do texto e do ícone */
     background-color: transparent; /* Fundo transparente */
 }
 
@@ -217,13 +228,13 @@ canvas{
 
 
 .info-filter h4{
-    color: #272727;
+    color: var(--gray-2);
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
 }
 
 .info-filter p{
-    color: #696969;
+    color: var(--gray-3);
     font-family: "Poppins", sans-serif;
     font-size: 14px;
 }
@@ -234,13 +245,13 @@ canvas{
 }
 
 .list-info h6{
-    color: #000;
+    color: var(--black);
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
 }
 
 .list-info p{
-    color: #898989;
+    color: var(--gray-4);
     font-family: Poppins;
     font-size: 14px;
 }
