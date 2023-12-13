@@ -55,8 +55,6 @@ function interaTabela(dataEmissao, dataCobranca, selectMes, selectStatus) {
     }
 
     if (!encontrado) {
-        const mensagem = document.getElementById('mensagem');
-        mensagem.textContent = "Nenhum valor encontrado.";
 
         // Exibe novamente todas as linhas da tabela
         for (let posicao in linha) {
@@ -65,8 +63,5 @@ function interaTabela(dataEmissao, dataCobranca, selectMes, selectStatus) {
             }
             linha[posicao].style.display = '';
         }
-    } else {
-        const mensagem = document.getElementById('mensagem');
-        mensagem.textContent = '';
     }
 }
