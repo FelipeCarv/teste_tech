@@ -32,17 +32,6 @@ function formataData(data){
 }
 
 //-------------- INTERA SOBRE A TABELA E APLICA O FILTRO --------------
-// function interaTabela(dataEmissao, dataCobranca, selectMes, selectStatus){
-//     let todasCelulas = document.querySelectorAll('#table tr');
-
-// todasCelulas.forEach(celula => {
-//   if (celula.textContent === dataEmissao) {
-//     celula.style.backgroundColor = 'yellow';
-//   } 
-// });
-
-// }
-
 function interaTabela(dataEmissao, dataCobranca, selectMes, selectStatus) {
     const tabela = document.getElementById('corpo-dados');
     const linha = tabela.getElementsByTagName('tr');
