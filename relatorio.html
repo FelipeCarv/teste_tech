@@ -88,19 +88,20 @@
                 <div class="col-md-3">
                   <label for="">Mês de Pagamento</label>
                   <select id="mesPagamento" class="form-control">
-                    <option value="00">Selecione</option>
-                    <option value="jan">Janeiro</option>
-                    <option value="fev">Fevereiro</option>
-                    <option value="dez">Dezembro</option>
+                    <option>Selecione</option>
+                    <option value="Janeiro">Janeiro</option>
+                    <option value="Fevereiro">Fevereiro</option>
+                    <option value="Dezembro">Dezembro</option>
                   </select>
                 </div>
 
                 <div class="col-md-3">
                   <label for="">Status da Nota</label>
                   <select id="statusNota" class="form-control" >
-                    <option value="00">Selecione</option>
-                    <option value="pendente">Pendente</option>
-                    <option value="pago">Pago</option>
+                    <option value="#">Selecione</option>
+                    <option value="Pendente">Pendente</option>
+                    <option value="Pago">Pago</option>
+                    <option value="Atraso">Atraso</option>
                   </select>
                 </div>
 
@@ -118,7 +119,81 @@
 
         <div class="list">
             <div class="container">
-                <ul class="list-group">
+              <table id="table" class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Nº Identificação</th>
+                    <th scope="col">Emissão</th>
+                    <th scope="col">Cobrança</th>
+                    <th scope="col">Mês Pagamento</th>
+                    <th scope="col">Valor</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Download</th>
+                  </tr>
+                </thead>
+                <tbody id="corpo-dados">
+                  <p id="mensagem" style="color: red;"></p>
+                  <tr>
+                    <td>Fulano de Tal</td>
+                    <td>20230123456</td>
+                    <td>10/12/2023</td>
+                    <td>15/12/2023</td>
+                    <td>Janeiro</td>
+                    <td>R$ 2.000,00</td>
+                    <td>Pago</td>
+                    <td>
+                      <button class="btn btn-primary btn-sm download-btn">
+                        <i class="bi bi-download"></i> Download
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Fulano de Tal</td>
+                    <td>20230123456</td>
+                    <td>10/12/2023</td>
+                    <td>15/12/2023</td>
+                    <td>Fevereiro</td>
+                    <td>R$ 2.000,00</td>
+                    <td>Pendente</td>
+                    <td>
+                      <button class="btn btn-primary btn-sm download-btn">
+                        <i class="bi bi-download"></i> Download
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Fulano de Tal</td>
+                    <td>20230123456</td>
+                    <td>09/12/2023</td>
+                    <td>15/12/2023</td>
+                    <td>Fevereiro</td>
+                    <td>R$ 2.000,00</td>
+                    <td>Pendente</td>
+                    <td>
+                      <button class="btn btn-primary btn-sm download-btn">
+                        <i class="bi bi-download"></i> Download
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Fulano de Tal</td>
+                    <td>20230123456</td>
+                    <td>10/12/2023</td>
+                    <td>15/12/2023</td>
+                    <td>Dezembro</td>
+                    <td>R$ 2.000,00</td>
+                    <td>Atraso</td>
+                    <td>
+                      <button class="btn btn-primary btn-sm download-btn">
+                        <i class="bi bi-download"></i> Download
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              
+                <!-- <ul id="lista" class="list-group">
 
                   <li class="list-group-item d-flex justify-content-between align-items-center">
                    <div class="list-info">
@@ -222,7 +297,7 @@
                      </button>
                    </li>
                   
-                </ul>
+                </ul> -->
               </div>
         </div>
    </main>

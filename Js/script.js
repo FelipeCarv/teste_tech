@@ -21,11 +21,7 @@ function selectsFilter (){
     let dataEmissao = formataData(selectDataEmissao);
     let dataCobranca = formataData(selectDataCobranca);
 
-    console.log(dataEmissao);
-    console.log(dataCobranca);
-    console.log(selectMes);
-    console.log(selectStatus);
-    
+    interaTabela(dataEmissao, dataCobranca, selectMes, selectStatus);
 }
 
 
@@ -33,4 +29,55 @@ function selectsFilter (){
 function formataData(data){
     let dataFormatar = new Date(data + 'T00:00:00');
     return dataFormatar.toLocaleDateString('pt-BR', { timeZone: 'UTC' })
+}
+
+//-------------- INTERA SOBRE A TABELA E APLICA O FILTRO --------------
+// function interaTabela(dataEmissao, dataCobranca, selectMes, selectStatus){
+//     let todasCelulas = document.querySelectorAll('#table tr');
+
+// todasCelulas.forEach(celula => {
+//   if (celula.textContent === dataEmissao) {
+//     celula.style.backgroundColor = 'yellow';
+//   } 
+// });
+
+// }
+
+function interaTabela(dataEmissao, dataCobranca, selectMes, selectStatus) {
+    const tabela = document.getElementById('corpo-dados');
+    const linha = tabela.getElementsByTagName('tr');
+    let encontrado = false;
+
+    for (let posicao in linha) {
+        if (true === isNaN(posicao)) {
+            continue;
+        }
+        let conteudoLinha = linha[posicao].innerHTML;
+        
+        if (true === conteudoLinha.includes(dataEmissao) ||
+            true === conteudoLinha.includes(dataCobranca) ||
+            true === conteudoLinha.includes(selectMes) ||
+            true === conteudoLinha.includes(selectStatus)) {
+            linha[posicao].style.display = '';
+            encontrado = true;
+        } else {
+            linha[posicao].style.display = 'none';
+        }
+    }
+
+    if (!encontrado) {
+        const mensagem = document.getElementById('mensagem');
+        mensagem.textContent = "Nenhum valor encontrado.";
+
+        // Exibe novamente todas as linhas da tabela
+        for (let posicao in linha) {
+            if (true === isNaN(posicao)) {
+                continue;
+            }
+            linha[posicao].style.display = '';
+        }
+    } else {
+        const mensagem = document.getElementById('mensagem');
+        mensagem.textContent = '';
+    }
 }
